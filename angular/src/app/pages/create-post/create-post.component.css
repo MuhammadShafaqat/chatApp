@@ -1,0 +1,26 @@
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+angular-editor {
+  width: 100%;  /* Ensure the editor takes the full width */
+  min-height: 10rem;  /* Adjust height as needed */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;  /* Add some space between buttons */
+}
+
+button[mat-button], button[mat-raised-button] {
+  margin-left: 8px; /* Add space between buttons */
+  padding: 8px 16px; /* Ensure padding */
+}

@@ -1,0 +1,15 @@
+<div class="register-container">
+  <h2>Create Your Account</h2>
+  <!-- <p>Join us today for an amazing experience!</p> -->
+  
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <!-- <input type="text" formControlName="firstName" placeholder="First Name" required />
+    <input type="text" formControlName="lastName" placeholder="Last Name" required /> -->
+    <input type="text" formControlName="username" placeholder="Username" required />
+    <input type="password" formControlName="password" placeholder="Password" required />
+    <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required />
+    <button type="submit">Register</button>
+  </form>
+  
+  <p>Already have an account? <a routerLink="/login">Login here</a></p>
+</div>

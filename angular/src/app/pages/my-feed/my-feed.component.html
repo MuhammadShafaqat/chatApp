@@ -1,0 +1,13 @@
+<div class="my-feed-container">
+    <h2>My Feed</h2>
+    
+    <button (click)="toggleSort()">Toggle Sort: {{ sortOption === 'mostUpvoted' ? 'Most Recent' : 'Most Upvoted' }}</button>
+    
+    <div *ngFor="let post of sortedPosts" class="post-card">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.content }}</p>
+      <p><strong>Posted by:</strong> {{ post.user }}</p>
+      <p><strong>Comments:</strong> <i class="fas fa-comments"></i> {{ post.commentCount }} | <strong>Votes:</strong> <i class="fas fa-thumbs-up"></i> {{ post.voteCount }} | <strong>Created:</strong> {{ post.createdAt | date:'short' }}</p>
+    </div>
+  </div>
+  

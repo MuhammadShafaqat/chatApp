@@ -1,0 +1,41 @@
+<div class="home-container">
+  <h2>Home Page</h2>
+
+  <div *ngFor="let post of posts" class="post-card">
+    <div class="post-header">
+      <img src="https://i.pravatar.cc/40" alt="User profile" class="profile-pic">
+      <div class="post-info">
+        <p class="user-name">{{ post.user }}</p>
+        <p class="post-date">{{ post.createdAt | date: 'short' }}</p>
+      </div>
+    </div>
+
+    <h3 class="post-title">{{ post.title }}</h3>
+    <p class="post-content">{{ post.content }}</p>
+
+    <div class="post-footer">
+      <p><strong>Comments:</strong> {{ post.commentCount }} | <strong>Votes:</strong> {{ post.voteCount }}</p>
+      <button (click)="toggleCommentInput(post)" class="toggle-comment-button">
+        <i class="fa fa-comment"></i> Comment
+      </button>
+    </div>
+
+    <!-- Comment Input Section, shown only when isCommenting is true -->
+    <div *ngIf="post.isCommenting" class="comment-section">
+      <textarea [(ngModel)]="post.newComment" placeholder="Write a comment..." class="comment-input"></textarea>
+      <button (click)="addComment(post)" class="post-comment-button">
+        <i class="fa fa-paper-plane"></i> Post Comment
+      </button>
+    </div>
+
+    <!-- Display Comments -->
+    <div *ngFor="let comment of post.comments" class="comment">
+      <p><strong>{{ comment.user }}:</strong> {{ comment.content }}</p>
+      <p class="comment-date">{{ comment.createdAt | date: 'short' }}</p>
+    </div>
+  </div>
+
+  <div class="user-actions" *ngIf="!isLoggedIn">
+    <p>If you're logged in, click <a (click)="navigateToMyFeed()">here</a> to view your feed.</p>
+  </div>
+</div>

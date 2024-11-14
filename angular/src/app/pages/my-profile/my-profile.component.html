@@ -1,0 +1,27 @@
+ 
+<div class="profile-page" *ngIf="isLoggedIn()">
+    <h1>My Profile</h1>
+  
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" (click)="togglePosts()">
+          <h2>My Posts</h2>
+          <!-- <span class="toggle-icon">{{ isPostsOpen ? '-' : '+' }}</span> -->
+        </div>
+        <div class="accordion-content" [ngClass]="{ 'open': isPostsOpen }">
+          <!-- <p *ngFor="let post of myPosts">{{ post.title }}</p> -->
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <div class="accordion-header" (click)="toggleFollowers()">
+          <h2>My Followers</h2>
+          <!-- <span class="toggle-icon">{{ isFollowersOpen ? '-' : '+' }}</span> -->
+        </div>
+        <div class="accordion-content" [ngClass]="{ 'open': isFollowersOpen }">
+          <!-- <p *ngFor="let follower of myFollowers">{{ follower.name }}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

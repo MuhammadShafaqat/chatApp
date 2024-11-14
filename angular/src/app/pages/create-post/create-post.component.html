@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Create New Post</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="newPost.title" placeholder="Enter post title" />
+  </mat-form-field>
+
+  <mat-label>Description</mat-label>
+  <angular-editor [(ngModel)]="newPost.description" [config]="editorConfig"></angular-editor>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onCreatePost()">Create Post</button>
+</mat-dialog-actions>

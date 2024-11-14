@@ -1,0 +1,43 @@
+/* Wrapper class for app component */
+.app-wrapper {
+  position: relative;
+  padding: 20px; /* Adjust padding if needed */
+}
+
+/* Floating button styling */
+.floating-button {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: #1d72b8;
+  color: white;
+  font-size: 18px;
+  z-index: 1000;
+  border: none;         /* Remove any default border */
+  width: 130px;          /* Standard size for a material design FAB */
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.floating-button:hover {
+  background-color: #1667a2; /* Darker shade for hover effect */
+}
+
+
+/* Dialog centered styling */
+.centered-dialog .mat-dialog-container {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  width: 400px !important; /* Set width as needed */
+  max-width: 90%; /* Optional: To make it responsive */
+  z-index: 2000 !important; /* High z-index to ensure it's on top */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Shadow for visual effect */
+}

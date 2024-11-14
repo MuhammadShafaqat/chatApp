@@ -1,0 +1,46 @@
+.post-details {
+  margin-top: 1rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient background */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.post-details:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.post-details h2 {
+  color: #1e88e5; /* Darker blue for title */
+  font-family: 'Roboto', sans-serif; /* Consistent font */
+  font-size: 2rem; /* Larger font size for the title */
+  margin-bottom: 1rem; /* Spacing below the title */
+}
+
+.post-details p {
+  font-family: 'Roboto', sans-serif; /* Consistent font */
+  line-height: 1.6; /* Better readability */
+  color: #333; /* Dark gray for text */
+}
+
+.post-details h3 {
+  margin-top: 2rem; /* Space above the comments section */
+  color: #e53935; /* Red for comment section title */
+  font-size: 1.5rem; /* Slightly larger font for subheading */
+}
+
+.comment {
+  background-color: #fff; /* White background for comments */
+  padding: 1rem; /* Padding for comments */
+  border-radius: 5px; /* Rounded corners for comments */
+  margin-bottom: 1rem; /* Space between comments */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for comments */
+  transition: transform 0.2s ease; /* Smooth transition for comment hover */
+}
+
+.comment:hover {
+  transform: translateY(-2px); /* Lift effect on comment hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
